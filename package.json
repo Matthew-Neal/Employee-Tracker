@@ -1,0 +1,27 @@
+{
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "description": "Application for a solution of managing a company's employees using node, inquirer, and MySQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matthew-Neal/Employee-Tracker.git"
+  },
+  "keywords": [
+    "Employee",
+    "Tracker"
+  ],
+  "author": "Matthew Neal",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Matthew-Neal/Employee-Tracker/issues"
+  },
+  "homepage": "https://github.com/Matthew-Neal/Employee-Tracker#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3",
+    "mysql": "^2.18.1"
+  }
+}
