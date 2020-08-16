@@ -1,15 +1,13 @@
 const mysql = require("mysql");
 const inquirer = require("inquirer");
+require("dotenv").config();
 
 const connection = mysql.createConnection({
     host: "localhost",
-    // Your port; if not 3306
     port: 3306,
-    // Your username
     user: "root",
-    // Your password
-    password: "",
-    database: "employees"
+    password: process.env.DB_PASSWORD,
+    database: "employees",
 });
 
 connection.connect(function (err) {
@@ -24,7 +22,7 @@ function start() {
         .prompt({
             name: "departmentRoleOrEmployee",
             type: "list",
-            message: "Would you like to create [DEPARTMENT], [ROLE], or [EMPLOYEE]?",
+            message: "Would you like to create DEPARTMENT, ROLE, or EMPLOYEE?",
             choices: ["DEPARTMENT", "ROLE", "EMPLOYEE", "EXIT"]
         })
         .then(function (answer) {
@@ -79,7 +77,7 @@ function addROLE() {
                 name: "role",
                 type: "input",
                 message: "What is the role you would like to add?"
-            }
+            },
             {
                 name: "salary",
                 type: "input",
@@ -90,7 +88,7 @@ function addROLE() {
                     }
                     return false;
                 }
-            }
+            },
             {
                 name: "deptNum",
                 type: "input",
@@ -131,12 +129,12 @@ function addEMPLOYEE() {
                 name: "firstName",
                 type: "input",
                 message: "What is the first name of the employee you would like to add?"
-            }
+            },
             {
                 name: "lastName",
                 type: "input",
                 message: "What is the last name of the employee you would like to add?"
-            }
+            },
             {
                 name: "roleID",
                 type: "input",
@@ -147,7 +145,7 @@ function addEMPLOYEE() {
                     }
                     return false;
                 }
-            }
+            },
             {
                 name: "managerID",
                 type: "input",
