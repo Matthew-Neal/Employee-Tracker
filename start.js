@@ -13,15 +13,35 @@ var connection = mysql.createConnection({
 
 connection.connect(function (err) {
     if (err) throw err;
+    console.log(
+        `
+
+        ███████ ███    ███ ██████  ██       ██████  ██    ██ ███████ ███████ 
+        ██      ████  ████ ██   ██ ██      ██    ██  ██  ██  ██      ██      
+        █████   ██ ████ ██ ██████  ██      ██    ██   ████   █████   █████   
+        ██      ██  ██  ██ ██      ██      ██    ██    ██    ██      ██      
+        ███████ ██      ██ ██      ███████  ██████     ██    ███████ ███████ 
+                                                                             
+                                                                             
+        ███    ███  █████  ███    ██  █████   ██████  ███████ ██████         
+        ████  ████ ██   ██ ████   ██ ██   ██ ██       ██      ██   ██        
+        ██ ████ ██ ███████ ██ ██  ██ ███████ ██   ███ █████   ██████         
+        ██  ██  ██ ██   ██ ██  ██ ██ ██   ██ ██    ██ ██      ██   ██        
+        ██      ██ ██   ██ ██   ████ ██   ██  ██████  ███████ ██   ██        
+                                                                             
+                                                                             
+        
+                                                    `);
     initialPrompt();
 });
+
 // Function prompts for Database
 async function initialPrompt() {
     inquirer
         .prompt({
             name: "action",
             type: "rawlist",
-            Message: "What would you like to do?",
+            Message: "Choose one of the following selections",
             choices: [
                 "View All Roles",
                 "View All Employees",
