@@ -14,7 +14,7 @@ var connection = mysql.createConnection({
 connection.connect(function (err) {
     if (err) throw err;
     console.log(
-        `"
+        `
 
         ███████ ███    ███ ██████  ██       ██████  ██    ██ ███████ ███████ 
         ██      ████  ████ ██   ██ ██      ██    ██  ██  ██  ██      ██      
@@ -31,7 +31,7 @@ connection.connect(function (err) {
                                                                              
                                                                              
         
-                                                    "`);
+                                                    `);
     initialPrompt();
 });
 
