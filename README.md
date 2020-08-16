@@ -26,3 +26,5 @@ https://github.com/Matthew-Neal
  Email me at:  
 impulseimg@gmail.com  
 for additional questions
+
+![Employee-Tracker](./Assets/Employee-Tracker.gif)
